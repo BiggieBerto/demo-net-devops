@@ -1,0 +1,41 @@
+﻿.root {
+    --primary: #1DB6C0;
+    --secondary: #E2F2F3;
+    --background: #FCFDFD;
+    --accent: #8B8C4F;
+    --text: #122021;
+}
+
+.root {
+    background-color: var(--background);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text);
+    margin-top: 2rem;
+    letter-spacing: 5px;
+}
+
+a {
+    background-color: var(--accent);
+    color: var(--background);
+    padding: 1rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-size: 16px;
+    max-width: 30rem;
+}
+
+.buttons {
+    text-align: center;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 70rem;
+    padding: 4rem;
+}

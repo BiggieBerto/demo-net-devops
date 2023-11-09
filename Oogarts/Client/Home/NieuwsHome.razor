@@ -1,0 +1,45 @@
+﻿<div class="root">
+    <h1>NIEUWS</h1>
+    <MudCarousel Class="mud-width-full root" Style="height:calc(100vh - 10rem);" ShowArrows="@arrows"
+        ShowBullets="@bullets" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object">
+
+        @* CUSTOM CAROUSEL ITEM *@
+        <MudCarouselItem Transition="transition">
+            <div class="d-flex card" style="height:100%">
+                <div class="imgContainer">
+                    <div class="artikel">
+                        <h2>titel</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Officiis, minus maxime! Quia commodi mollitia fugit rem blanditiis.
+                            Architecto voluptates, magni accusamus veniam beatae aspernatur iusto.
+                            Pariatur maiores praesentium sequi mollitia.
+                        </p>
+                        <a href="#">Lees verder</a>
+                    </div>
+                    <img src="img/nieuws-artikel-foto.jpg" alt="nieuws-foto">
+                </div>
+            </div>
+        </MudCarouselItem>
+
+        @* DEFAULT MUDBLAZOR CAROUSEL ITEM *@
+        <MudCarouselItem Transition="transition" Color="@Color.Primary">
+            <div class="d-flex" style="height:100%">
+                <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Size="@Size.Large" />
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="transition" Color="@Color.Secondary">
+            <div class="d-flex" style="height:100%">
+                <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Size="@Size.Large" />
+            </div>
+        </MudCarouselItem>
+    </MudCarousel>
+</div>
+
+@code {
+    private bool arrows = true;
+    private bool bullets = true;
+    private bool enableSwipeGesture = true;
+    private bool autocycle = false;
+    private Transition transition = Transition.Slide;
+}

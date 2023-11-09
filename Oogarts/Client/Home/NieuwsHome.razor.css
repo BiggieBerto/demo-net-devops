@@ -1,0 +1,55 @@
+.root {
+    --primary: #1DB6C0;
+    --secondary: #E2F2F3;
+    --background: #FCFDFD;
+    --accent: #8B8C4F;
+    --text: #122021;
+}
+
+ .card {
+    background-color: #888888;
+    border: none;
+    overflow: clip;
+ }
+
+
+h1 {
+    text-align: center;
+    background-color: var(--secondary);
+    color: var(--text);
+    padding: 1.5rem;
+    margin: 0;
+    letter-spacing: 5px;
+}
+
+.imgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: clip;
+    z-index: 1;
+}
+
+img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.artikel {
+    width: 32rem;
+    height: 18rem;
+    position: absolute;
+    z-index: 2;
+    background-color: var(--secondary);
+    padding: 1rem;
+}
+
+.artikel > a {
+    text-decoration: underline;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}

@@ -1,0 +1,38 @@
+﻿@inject NavigationManager NavigationManager
+
+<nav class="root">
+    <a href="">Vision</a>
+    <ul>
+        <li>
+            <NavLink to="oogaandoeningen" class="nav-item">OOGAANDOENINGEN</NavLink>
+        </li>
+        <li>
+            <a href="team">
+                TEAM
+            </a>
+        </li>
+        <li>
+            <a href="nieuws">
+                NIEUWS
+            </a>
+        </li>
+        <li>
+            <a href="afspraak-maken" id="afspraken">
+                AFSPRAAK MAKEN
+            </a>
+        </li>
+        <li>
+            <a href="#contact" @onclick="ScrollToContact">
+                CONTACT
+            </a>
+        </li>
+    </ul>
+</nav>
+
+@code {
+    private async Task ScrollToContact()
+    {
+        // TODO - scrollfunctie uitwerken
+        Console.WriteLine("Scrolling to contact");
+    }
+}

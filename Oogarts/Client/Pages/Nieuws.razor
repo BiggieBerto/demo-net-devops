@@ -1,0 +1,43 @@
+﻿@inject HttpClient Http
+@using Oogarts.Shared
+
+@page "/nieuws"
+
+<PageTitle>Oogaandoeningen</PageTitle>
+
+<h1>Nieuws</h1>
+@if (artikels == null) {
+    <p><em>Loading...</em></p>
+} else {
+    <div class="artikels">
+        <div class="top-artikels">
+            <div class="hoofdartikel">
+                <NieuwsHoofdartikel Titel="@artikels[0].Titel" Foto="@artikels[0].Image"/>
+            </div>
+            <div class="zijartikels">
+                @foreach (ArtikelDto artikel in artikels.Skip(1).Take(3))
+                {
+                    <NieuwsZijartikel Titel="@artikel.Titel" Foto="@artikel.Image"/>
+                }
+            </div>
+        </div>
+        <div class="artikels-lijst">
+            @foreach (ArtikelDto artikel in artikels.Skip(4))
+            {
+                <NieuwsArtikel Titel="@artikel.Titel" Foto="@artikel.Image"/>
+            }
+        </div>
+    </div>
+}
+
+<Contact />
+
+@code {
+
+    private ArtikelDto[]? artikels;
+
+    protected override async Task OnInitializedAsync()
+    {
+        artikels = await Http.GetFromJsonAsync<ArtikelDto[]>("api/artikel");
+    }
+}

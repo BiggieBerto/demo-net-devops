@@ -1,0 +1,26 @@
+h1 {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.artikels-lijst {
+    margin: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top-artikels {
+    display: grid;
+    grid-template-columns: 40rem 20rem;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.zijartikels{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

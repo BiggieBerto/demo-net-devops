@@ -1,0 +1,19 @@
+h1 {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.oogaandoeningen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    row-gap: 4rem;
+    margin: 2rem;
+    padding-bottom: 8rem;
+}
+
+/* .oogaandoeningen:nth-child(odd) {
+    place-self: end;
+} */

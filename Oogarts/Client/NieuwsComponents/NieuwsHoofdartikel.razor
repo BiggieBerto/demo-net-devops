@@ -1,0 +1,16 @@
+﻿<div class="artikel">
+    <div class="foto">
+        <img src="@Foto" alt="foto kan niet geladen worden" />
+    </div>
+    <div class="titel">
+        <h3>@Titel</h3>
+    </div>
+</div>
+
+
+@code {
+    [Parameter]
+    public string Titel {get; set;} = "default titel";
+    [Parameter]
+    public string? Foto {get; set;}
+}

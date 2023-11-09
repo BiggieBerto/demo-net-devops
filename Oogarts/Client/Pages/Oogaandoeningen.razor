@@ -1,0 +1,23 @@
+﻿@page "/oogaandoeningen"
+
+<PageTitle>Oogaandoeningen</PageTitle>
+
+<h1>OOGAANDOENINGEN</h1>
+<div class="oogaandoeningen">
+    <OogaandoeningComp 
+        Titel="TestTitel" 
+        Inhoud="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis nulla consequatur sapiente cum, atque odio magnam accusamus tempora totam omnis? Quo suscipit ab quos commodi at libero assumenda aperiam labore?"
+        Dokters=@Dokters
+    />
+    <OogaandoeningComp 
+        Titel="Titel 2" 
+        Inhoud="info tekst over deze aandoeningen komt hier te staan."
+        Dokters=@Dokters
+    />
+</div>
+
+<Contact />
+
+@code {
+    private List<String> Dokters { get; set; } = new List<string> { "Dokter1", "Dokter2", "Dokter3" };
+}

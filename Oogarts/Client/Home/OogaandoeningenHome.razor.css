@@ -1,0 +1,54 @@
+.root {
+    --primary: #1DB6C0;
+    --secondary: #E2F2F3;
+    --background: #FCFDFD;
+    --accent: #8B8C4F;
+    --text: #122021;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text);
+    padding: 3rem;
+    letter-spacing: 5px;
+}
+
+.aandoeningen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    width: 50rem;
+    margin: auto;
+}
+
+.gridItem {
+    border-bottom: 2px solid var(--text);
+    width: 80%;
+    text-align: center;
+    padding: 1rem;
+    font-size: large;
+}
+
+.gridItem:last-child, .gridItem:nth-last-child(2) {
+    border-bottom: none;
+}
+
+.btn {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.button {
+    background-color: var(--accent);
+    color: var(--background);
+    padding: 1.5rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    font-size: large;
+    letter-spacing: 3px;
+    /* max-width: 30rem; */
+    text-align: center;
+}
+

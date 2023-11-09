@@ -1,0 +1,41 @@
+﻿@inject HttpClient Http
+
+<div class="ons-team">
+    @if (artsen == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <h1>ONS TEAM</h1>
+        <div class="team">
+            @foreach (var arts in artsen)
+            {
+                <div class="arts">
+                    <img src="@arts.ProfilePicture" />
+                    <h2>@arts.Naam @arts.Voornaam</h2>
+                    @if (arts.SpecialisatieDtos.Count > 0)
+                    {
+                        <p class="specialisaties">Specialisaties:</p>
+                        <ul>
+                            @foreach (var specialisatie in arts.SpecialisatieDtos)
+                            {
+                                <li>@specialisatie.Naam</li>
+                            }
+                        </ul>
+                    }
+                    <a href="#">Bekijk beschikbaarheid</a>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private TeamDto[]? artsen;
+
+    protected override async Task OnInitializedAsync()
+    {
+        artsen = await Http.GetFromJsonAsync<TeamDto[]>("api/Team");
+    }
+}
